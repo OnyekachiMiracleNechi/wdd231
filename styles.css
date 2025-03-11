@@ -5,55 +5,62 @@ body {
     padding: 0;
     box-sizing: border-box;
     background-color: #f5f5f5;
-    color:black;
-}
-
-h1{
-    color: #0b4a6b;
-}
-
-h2{
-    background-color: #0b4a6b;
-    color: #f5f5f5;
-    margin-top: 0%;
-    max-width:100% ;
-    border-radius: 5px;
-}
-
-p{
+    color: black;
     text-align: center;
 }
 
+h1 {
+    color: #0b4a6b;
+}
 
+h2 {
+    background-color: #0b4a6b;
+    color: #f5f5f5;
+    margin-top: 0;
+    max-width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+/* Header */
 header {
     background-color: #0b4a6b;
     color: white;
     padding: 10px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 10px;
+    position: relative;
 }
 
 .profile-pic {
     border-radius: 50%;
     width: 50px;
     height: 50px;
-    margin-bottom: 10px;
 }
 
+/* Navigation */
 nav {
     width: 100%;
     background-color: black;
-    margin-top: 20px;
 }
 
 .menu-button {
     display: none;
     background: none;
     border: none;
-    color:white;
+    color: white;
     font-size: 24px;
-    margin-left: auto;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px; /* ✅ Moved to the top-right */
 }
 
 .navigation {
@@ -61,13 +68,17 @@ nav {
     padding: 0;
     display: flex;
     gap: 20px;
-   
 }
 
 .navigation a {
     color: white;
     text-decoration: none;
-    margin-left: auto;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.navigation a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .active {
@@ -75,6 +86,7 @@ nav {
     color: white;
 }
 
+/* Main Content */
 main {
     padding: 20px;
 }
@@ -87,6 +99,7 @@ section {
     background-color: white;
 }
 
+/* Course Cards */
 .courses-container {
     display: grid;
     gap: 10px;
@@ -109,6 +122,7 @@ section {
     color: black;
 }
 
+/* Footer */
 footer {
     background-color: #0b4a6b;
     color: white;
@@ -117,12 +131,11 @@ footer {
 }
 
 .flag {
-    width: 20px; /* Reduce width as needed */
-    height: auto; /* Maintain aspect ratio */
-    vertical-align: middle; /* Align with text */
-    margin-left: 5px; /* Add a bit of spacing if needed */
+    width: 20px;
+    height: auto;
+    vertical-align: middle;
+    margin-left: 5px;
 }
-
 
 /* Mobile Styles */
 @media (max-width: 768px) {
@@ -141,89 +154,60 @@ footer {
     }
 
     .navigation.show {
-        display: block;
-        position: relative;
-        width: 100%;
-        height: auto;
-    }
-
-      /* Header Layout */
-      header {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 10px;
-        background-color: #0b4a6b;
-        color: white;
     }
 
-    /* Profile Picture */
+    /* Adjust Profile Section */
     .profile {
-        border-radius: 50%;
         width: 50px;
         height: 50px;
-        margin-left: 0;
     }
 
-    /* Profile Name */
-    .header-name {
-        flex-grow: 1;
-        margin-left: 10px;
-        font-size: 1.5rem;
-        font-weight: bold;
-    }
-
-    /* Menu Button */
-    .menu-button {
-        display: block;
-        background: none;
-        border: none;
-        color:white;
-        font-size: 24px;
-    }
-
-    /* Navigation Menu */
-    nav {
-        background-color: #0b4a6b;
-        width: 100%;
-    }
-
-    .navigation {
-        display: none;
-        flex-direction: column;
-        padding: 0;
-        margin: 0;
-        list-style: none;
-        width: 100%;
-    }
-
-    .navigation.show {
-        display: block;
-        margin-right: auto;
-    }
-
-    .certificate, h2{
+    /* Center Content */
+    .certificate,
+    h2 {
         text-align: center;
-         
     }
 
-    .location img {
-        width: 50%;
+    /* Palm Tree Image & Name Centering */
+    .palm-tree {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .palm-tree img {
+        width: 80%;
         height: auto;
         border-radius: 5px;
-        margin-left:150px ;
-        margin-top: 20px;
+        margin: 20px auto;
+        display: block;
+        padding: 10px;
+    }
+
+    .palm-tree-name {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #0b4a6b;
+        margin-top: 10px;
+    }
+
+    /* Location Section */
+    .location img {
+        width: 80%;
+        height: auto;
+        border-radius: 5px;
+        margin: 20px auto;
+        display: block;
         padding: 10px;
     }
 
     .navigation a {
         padding: 10px;
-        color: white;
-        text-decoration: none;
-        border-top: 1px solid #fff;
-        width: 100%;
-        display: block;
         text-align: center;
+        border-top: 1px solid white;
+        display: block;
     }
 }
 
@@ -232,11 +216,9 @@ footer {
     header {
         flex-direction: column;
         align-items: center;
-       
     }
 
-   
-    /* Make navigation full width and centered under the header */
+    /* Navigation */
     nav {
         width: 100%;
         background-color: black;
@@ -246,70 +228,41 @@ footer {
     .navigation {
         display: flex;
         justify-content: center;
-        gap: 30px; /* Increase gap for a more spaced-out look */
+        gap: 30px;
     }
 
-    .navigation a {
-        padding: 10px 15px;
-        transition: background-color 0.3s, color 0.3s;
-    }
-
-    .certificate, h2{
-        text-align: center;
-         
-    }
-
-
-    .filter-button{
-        text-align: center;
-    }
-  
-    
-
-    .navigation a:hover {
-        background-color: rgba(255, 255, 255, 0.2);
-    }
-
-   .courses-container {
+    .courses-container {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    /* Make Course Work and Location sections side by side */
+    /* Course Work & Location Side by Side */
     .main-content {
         display: flex;
         gap: 20px;
     }
 
-    .course-work, .location {
+    .course-work,
+    .location {
         flex: 1;
     }
 
-    /* Ensure images in the location section are responsive */
+    /* Palm Tree Image Centering */
+    .palm-tree img {
+        width: 50%;
+    }
+
+    /* Palm Tree Name */
+    .palm-tree-name {
+        font-size: 1.8rem;
+    }
+
+    /* Center Location Image */
     .location img {
         width: 50%;
         height: auto;
         border-radius: 5px;
-        margin-left: 150px;
-        margin-top: 20px;
+        margin: 20px auto;
+        display: block;
         padding: 10px;
     }
-
-    .profile {
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        margin: 0;
-    }
-
-    /* Profile Name */
-    .header-name {
-        flex-grow: 1;
-        margin-left: 10px;
-        font-size: 1.5rem;
-        font-weight: bold;
-    }
-
-   
-
-   
 }

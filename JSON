@@ -1,0 +1,38 @@
+{
+  "familyName": "Chineche",
+  "moveInDate": "2025-03-10",
+  "numOfFamilyMembers": 6,
+  "visitedByBishopric": true,
+  "familyMembers": [
+    {
+      "name": "Uzochi Chineche",
+      "gender": "Female",
+      "birthdate": "1999-05-14"
+    },
+    {
+      "name": "Jessica Chineche",
+      "gender": "Female",
+      "birthdate": "2000-08-21"
+    },
+    {
+      "name": "Gladyn chineche",
+      "gender": "Female",
+      "birthdate": "2001-11-30"
+    },
+    {
+      "name": "Divine chineche",
+      "gender": "Female",
+      "birthdate": "2003-07-18"
+    },
+    {
+      "name": "Miracle chineche",
+      "gender": "Female",
+      "birthdate": "2005-03-22"
+    },
+    {
+      "name": "Victor chineche",
+      "gender": "Male",
+      "birthdate": "2009-09-14"
+    }
+  ]
+}
