@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Welcome to the Transport Chamber of Commerce - Empowering Businesses">
+    <meta name="author" content="Onyekachi M. Nechi">
+    <title>Home - Transport Chamber</title>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/index.css">
+    <script src="scripts/directory.js" defer></script>
+
+     <!-- Facebook Open Graph Meta Tags -->
+     <meta property="og:title" content="Transport Chamber of Commerce - Business Directory">
+     <meta property="og:type" content="website">
+     <meta property="og:image" content="https://yourwebsite.com/images/og-image.jpg">
+     <meta property="og:url" content="https://yourwebsite.com/directory.html">
+     <meta property="og:description" content="Explore local businesses and organizations that are part of the Transport Chamber of Commerce.">
+     <meta property="og:site_name" content="Transport Chamber">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.jpg" alt="Transport Chamber Logo">
+            <h1>Transport Chamber of Commerce</h1>
+        </div>
+
+        <button id="menuButton" class="menu-button" aria-label="Toggle Menu">☰</button>
+
+        <nav>
+            <ul>
+               
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="join.html">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h2>Welcome to the Transport Chamber of Commerce</h2>
+            <p>Empowering businesses and fostering economic growth in our community.</p>
+            <a href="join.html" class="cta-button">Join Us Today</a>
+        </section>
+
+        <!-- Community Events & Weather -->
+        <section class="events-weather">
+            <div class="events">
+                <h3>📢 Community Updates & Events</h3>
+                <ul>
+                    <li>🚛 Transport Expo 2025 - March 30</li>
+                    <li>📅 Chamber Networking Event - April 10</li>
+                    <li>🏆 Business Awards Night - May 15</li>
+                </ul>
+            </div>
+
+            <div class="current-weather">
+                <h3>🌦️ Current Weather</h3>
+                <div id="weather">
+                    <p>Loading weather data...</p>
+                </div>
+            </div>
+
+            <div class="weather-forecast">
+                <h3>📅 Weather Forecast</h3>
+                <div id="forecast">
+                    <p>Loading forecast...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Business Spotlight -->
+        <section class="spotlight">
+            <h3>🌟 Business Spotlight</h3>
+            <div class="business-spotlight">
+                <img src="images/business-hub.jpg" alt="Featured Business">
+                <div>
+                    <h4>Elite Haulage</h4>
+                    <p>Providing premium transport and logistics solutions across Nigeria.</p>
+                    <a href="directory.html">View Directory</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Montage -->
+        <section class="montage">
+            <h3>Explore Our City</h3>
+            <div class="image-grid">
+                <img src="images/cityscape.jpg" alt="Nigerian Cityscape">
+                <img src="images/landmark.jpg" alt="Nigerian Landmark">
+                <img src="images/business-hub.jpg" alt="Business Hub">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-left">
+            <p>📍 No 2 Blue Bell Bankole Estate, Magboro, Ogun State</p>
+            <p>📧 Email: <a href="mailto:info@transportchamber.org">info@transportchamber.org</a></p>
+            <p>📞 Phone: +234 7056321232</p>
+        </div>
+        
+        <div class="footer-center">
+            <a href="https://www.youtube.com" target="_blank">
+                <img src="images/youtube.png" alt="YouTube" class="social-icon">
+            </a>
+            <a href="https://www.linkedin.com" target="_blank">
+                <img src="images/linkedin.png" alt="LinkedIn" class="social-icon">
+            </a>
+            <a href="https://www.facebook.com/yourpage" target="_blank">
+                <img src="images/Facebook_logo.jpg" alt="Facebook" width="24">
+            </a>
+           
+        </div>
+        
+        <div class="footer-right">
+            <p>🌍 Transport Chamber of Commerce - Empowering Businesses</p>
+            <p>&copy; <span id="year"></span> | Onyekachi M. Nechi | WDD 231</p>
+            <p>Last modified: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+        document.getElementById("lastModified").textContent = document.lastModified;
+    </script>
+</body>
+</html>

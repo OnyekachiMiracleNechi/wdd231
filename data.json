@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Kachi Logistics",
+        "address": "123 Business Street, Nigeria",
+        "phone": "+234 800 123 4567",
+        "website": "https://kachilogistics.com",
+        "image": "images/kachi-logo.png",
+        "membership": "gold"
+    },
+    {
+        "name": "Nechi Tech Solutions",
+        "address": "456 Innovation Drive, Nigeria",
+        "phone": "+234 900 987 6543",
+        "website": "https://nechitech.com",
+        "image": "images/nechi-tech.png",
+        "membership": "silver"
+    }
+]

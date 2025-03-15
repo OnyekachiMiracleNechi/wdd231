@@ -1,0 +1,58 @@
+[
+    {
+        "name": "Speedy Logistics",
+        "address": "123 Fast Lane, Lagos, Nigeria",
+        "phone": "+234 810 000 1234",
+        "website": "https://speedylogistics.com",
+        "image": "speedy.jpg",
+        "membership": 3
+    },
+    {
+        "name": "Reliable Transport Ltd.",
+        "address": "45 Main St, Abuja, Nigeria",
+        "phone": "+234 803 555 6789",
+        "website": "https://reliabletransport.com",
+        "image": "reliable.jpg",
+        "membership": 2
+    },
+    {
+        "name": "Cargo Kings",
+        "address": "78 Cargo Road, Port Harcourt, Nigeria",
+        "phone": "+234 909 111 2345",
+        "website": "https://cargokings.com",
+        "image": "cargo.jpg",
+        "membership": 1
+    },
+    {
+        "name": "Express Movers",
+        "address": "99 Quick Way, Ibadan, Nigeria",
+        "phone": "+234 812 333 5678",
+        "website": "https://expressmovers.com",
+        "image": "expressmovers.jpg",
+        "membership": 3
+    },
+    {
+        "name": "Elite Haulage",
+        "address": "10 Business Park, Enugu, Nigeria",
+        "phone": "+234 701 222 8765",
+        "website": "https://elitehaulage.com",
+        "image": "ellie.jpg",
+        "membership": 2
+    },
+    {
+        "name": "Mega Freight",
+        "address": "88 Logistics Hub, Kano, Nigeria",
+        "phone": "+234 814 777 9999",
+        "website": "https://megafreight.com",
+        "image": "mega.jpg",
+        "membership": 1
+    },
+    {
+        "name": "Swift Couriers",
+        "address": "66 Quick Lane, Jos, Nigeria",
+        "phone": "+234 902 111 2233",
+        "website": "https://swiftcouriers.com",
+        "image": "swift.jpg",
+        "membership": 2
+    }
+]
