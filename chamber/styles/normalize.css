@@ -1,0 +1,99 @@
+/* ✅ Reset Box Model */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ✅ Ensure Full Width & Height */
+html, body {
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background-color: #f8f9fa; /* Light Gray Background */
+    color: #333; /* Dark Gray Text */
+}
+
+
+
+/* ✅ Reset Links */
+a {
+    text-decoration: none;
+    color: #007bff; /* Blue for Links */
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* ✅ Improve Clickable Elements */
+a, button {
+    cursor: pointer;
+}
+
+/* ✅ Hover & Focus Effects for Clickable Elements */
+a:hover, a:focus,
+button:hover, button:focus {
+    color: #ffcc00; /* Bright Yellow */
+    transform: scale(1.05);
+}
+
+/* ✅ Responsive Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    line-height: 1.2;
+    color: white; /* Slightly Darker Text for Headings */
+}
+
+/* ✅ Normalize Forms */
+input, textarea, button {
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* ✅ Buttons Style Reset */
+button {
+    background: #007bff; /* Primary Blue */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+/* ✅ Button Hover Effect */
+button:hover {
+    background: #0056b3; /* Darker Blue */
+    transform: scale(1.1);
+}
+
+/* ✅ Normalize Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+/* ✅ Accessibility: Focus Styles */
+a:focus, button:focus, input:focus {
+    outline: 2px solid #ffcc00; /* Yellow Focus Outline */
+    outline-offset: 2px;
+}
+
+/* ✅ Media Queries for Responsiveness */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    button {
+        padding: 8px 16px;
+    }
+}
