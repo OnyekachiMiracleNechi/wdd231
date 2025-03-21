@@ -104,10 +104,19 @@ function filterBusinesses() {
     });
 }
 
-// Update Year and Last Modified Date
+// ✅ Updated: Update Year and Last Modified Date
 function updateDateInfo() {
-    document.getElementById("year").textContent = new Date().getFullYear();
-    document.getElementById("lastModified").textContent = document.lastModified;
+    const yearElement = document.getElementById("year");
+    const lastModifiedElement = document.getElementById("lastModified");
+
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
+
+    if (lastModifiedElement) {
+        const now = new Date();
+        lastModifiedElement.textContent = `Last Updated: ${now.toLocaleString()}`;
+    }
 }
 
 // Handle Form Submission
