@@ -3,13 +3,13 @@
 
 /* ✅ Define CSS Variables */
 :root {
-    --primary-bg: rgba(0, 0, 0, 0.6); /* Semi-transparent dark background */
-    --header-bg: rgba(0, 0, 0, 0.8); /* Darker semi-transparent black for header */
-    --section-bg: rgba(255, 255, 255, 0.2); /* Light transparent white for sections */
-    --text-color: #fff; /* White text for readability */
-    --cta-bg: #ffcc00; /* Bright yellow for call-to-action */
-    --cta-hover-bg: #ff9900; /* Darker yellow for hover effect */
-    --nav-hover-bg: rgba(255, 255, 255, 0.2); /* Navigation hover effect */
+    --primary-bg: rgba(0, 0, 0, 0.6);
+    --header-bg: rgba(0, 0, 0, 0.8);
+    --section-bg: rgba(255, 255, 255, 0.2);
+    --text-color: #fff;
+    --cta-bg: #ffcc00;
+    --cta-hover-bg: #ff9900;
+    --nav-hover-bg: rgba(255, 255, 255, 0.2);
     --border-radius: 8px;
     --spacing: 20px;
 }
@@ -22,10 +22,7 @@ html, body {
     padding: 0;
     overflow-x: hidden;
     font-family: Arial, sans-serif;
-    background-image: url('../images/background-img.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+    background: url('../images/background-img.jpg') center/cover fixed;
     color: var(--text-color);
 }
 
@@ -58,7 +55,6 @@ header {
 
 .logo img {
     height: 50px;
-    max-width: 100%;
     margin-right: 10px;
 }
 
@@ -71,60 +67,8 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-}
-
-@media screen and (max-width: 768px) {
-    nav ul {
-        display: none;
-        position: absolute;
-        top: 60px;
-        right: 10px;
-        background: none;
-        text-align: right;
-        padding: 0;
-        flex-direction: column;
-        z-index: 1000;
-    }
-
-    nav ul.show {
-        display: flex;
-    }
-
-    nav ul li {
-        display: block;
-        padding: 10px;
-        background: var(--header-bg);
-        border-radius: var(--border-radius);
-        margin: 5px 0;
-    }
-
-    .menu-button {
-        display: block;
-        font-size: 2rem;
-        background: none;
-        border: none;
-        color: var(--text-color);
-        cursor: pointer;
-        padding: 10px;
-    }
-}
-
-@media screen and (min-width: 769px) {
-    nav ul {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        position: static;
-        background: none;
-    }
-
-    .menu-button {
-        display: none;
-    }
-}
-
-nav ul li {
-    display: inline;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 nav ul li a {
@@ -142,6 +86,42 @@ nav ul li a:hover, .active {
     border-radius: var(--border-radius);
 }
 
+/* ✅ Mobile Navigation */
+.menu-button {
+    display: none;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        background: var(--header-bg);
+        flex-direction: column;
+        z-index: 1000;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        padding: 10px;
+        margin: 5px 0;
+    }
+
+    .menu-button {
+        display: block;
+    }
+}
+
 /* ✅ Hero Section */
 .hero {
     text-align: center;
@@ -155,13 +135,13 @@ nav ul li a:hover, .active {
 
 /* ✅ CTA Button */
 .cta-button {
+    display: inline-block;
     text-decoration: none;
     background: var(--cta-bg);
     color: black;
     padding: 12px 20px;
     border-radius: var(--border-radius);
     font-weight: bold;
-    display: inline-block;
     margin-top: 10px;
     transition: 0.3s ease;
 }
@@ -170,7 +150,7 @@ nav ul li a:hover, .active {
     background: var(--cta-hover-bg);
 }
 
-/* ✅ Community Events & Weather */
+/* ✅ Events & Weather */
 .events-weather {
     display: flex;
     gap: var(--spacing);
@@ -186,7 +166,6 @@ nav ul li a:hover, .active {
     border-radius: var(--border-radius);
     flex: 1;
     min-width: 250px;
-    max-width: 100%;
 }
 
 /* ✅ Business Spotlight */
@@ -196,7 +175,6 @@ nav ul li a:hover, .active {
     border-radius: var(--border-radius);
     text-align: center;
     margin: 30px auto;
-    max-width: 100%;
 }
 
 .business-spotlight {
@@ -209,7 +187,6 @@ nav ul li a:hover, .active {
 
 .business-spotlight img {
     width: 120px;
-    height: auto;
     border-radius: var(--border-radius);
 }
 
@@ -229,7 +206,6 @@ nav ul li a:hover, .active {
 
 .image-grid img {
     width: 30%;
-    max-width: 100%;
     border-radius: var(--border-radius);
 }
 
@@ -252,18 +228,15 @@ footer {
     min-width: 150px;
 }
 
-/* ✅ Left Section - Address */
 .footer-left {
     text-align: left;
     font-size: 14px;
 }
 
-/* ✅ Center Section - Social Icons */
 .footer-center {
     text-align: center;
 }
 
-/* ✅ Right Section - WDD 231 & Date */
 .footer-right {
     text-align: right;
     font-size: 14px;
@@ -278,7 +251,6 @@ footer {
 
 .social-icon {
     width: 30px;
-    height: 30px;
     transition: transform 0.3s ease;
 }
 
@@ -286,15 +258,11 @@ footer {
     transform: scale(1.1);
 }
 
-/* ✅ Responsive Design */
+/* ✅ Responsive Adjustments */
 @media screen and (max-width: 768px) {
-    .events-weather {
+    .events-weather, .business-spotlight {
         flex-direction: column;
         gap: 10px;
-    }
-
-    .business-spotlight {
-        flex-direction: column;
     }
 
     .image-grid img {
