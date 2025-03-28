@@ -103,6 +103,29 @@ nav ul {
         margin: 5px 0;
     }
 
+    .events-weather {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .business-spotlight {
+        flex-direction: column;
+    }
+
+    .image-grid img {
+        width: 80%;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-left, .footer-center, .footer-right {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
     /* ✅ Show Menu Button */
     .menu-button {
         display: block;
@@ -112,6 +135,15 @@ nav ul {
         color: white;
         cursor: pointer;
         padding: 10px;
+    }
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%; /* Adjust width to fit smaller screens */
+        max-width: 300px;
     }
 }
 
@@ -293,31 +325,8 @@ footer {
     transform: scale(1.1);
 }
 
-/* ✅ Responsive Design */
-@media screen and (max-width: 768px) {
-    .events-weather {
-        flex-direction: column;
-        gap: 10px;
-    }
 
-    .business-spotlight {
-        flex-direction: column;
-    }
 
-    .image-grid img {
-        width: 80%;
-    }
-
-    footer {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-left, .footer-center, .footer-right {
-        text-align: center;
-        margin-bottom: 10px;
-    }
-}
 
 /* ✅ Membership Form */
 .membership-form {
@@ -394,5 +403,85 @@ footer {
     .membership-form {
         width: 90%;
         padding: 20px;
+    }
+}
+
+/* Modal Styling */
+.modal {
+    display: none; /* Hide by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: transparent;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+.close-modal {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.2);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.close-modal:hover {
+    background-color: #ff9900;
+}
+
+/* Membership Cards Animation */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 250px;
+    padding: 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Start hidden */
+    transform: translateY(30px); /* Move down */
+    animation: fadeSlideUp 1s ease-out forwards;
+}
+
+/* Staggered Animation Delay */
+.card:nth-child(1) { animation-delay: 0.4s; }
+.card:nth-child(2) { animation-delay: 0.8s; }
+.card:nth-child(3) { animation-delay: 0.12s; }
+.card:nth-child(4) { animation-delay: 1.4s; }
+
+/* Keyframes for Fade and Slide Up */
+@keyframes fadeSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+        background-color: #ff9900;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        background-color: rgba(255, 255, 255, 0.2); /* Light blue highlight */
     }
 }

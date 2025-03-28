@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="styles/join.css">
     
     <script src="scripts/directory.js" defer></script>
+    <script src="scripts/join.js" defer></script>
 
      <!-- Facebook Open Graph Meta Tags -->
      <meta property="og:title" content="Transport Chamber of Commerce - Business Directory">
@@ -44,61 +45,120 @@
     </header>
 
     <main>
-        <h2>🚀 Become a Member of the Chamber</h2>
-        <p>Join the Transport Chamber of Commerce and unlock networking opportunities, business growth, and exclusive benefits.</p>
-
-        <!-- Membership Levels -->
-        <section class="membership-levels">
-            <h3>📌 Membership Levels</h3>
-            <div class="level non-profit">
-                <h4>Non-Profit</h4>
-                <p>✅ Basic directory listing <br> ✅ Access to networking events <br> ✅ Community involvement opportunities</p>
-                <p><strong>Annual Fee: Free</strong></p>
-            </div>
-
-            <div class="level silver">
-                <h4>Silver Membership</h4>
-                <p>✅ Featured directory listing <br> ✅ Business training sessions <br> ✅ Social media promotion <br> ✅ Monthly networking luncheons</p>
-                <p><strong>Annual Fee: $250</strong></p>
-            </div>
-
-            <div class="level gold">
-                <h4>Gold Membership</h4>
-                <p>✅ Premium directory listing <br> ✅ Sponsorship opportunities <br> ✅ Advertising in chamber publications <br> ✅ VIP networking events</p>
-                <p><strong>Annual Fee: $500</strong></p>
-            </div>
-        </section>
-
         <!-- Membership Application Form -->
         <section class="membership-form">
-            <h3>📋 Membership Application</h3>
-            <form id="joinForm">
-                <label for="businessName">Business Name:</label>
-                <input type="text" id="businessName" name="businessName" required><br>
+            <h2>Membership Application</h2>
+            <form id="joinForm" method="get" action="thankyou.html">
+                <label>First Name:
+                    <input type="text" name="firstName" title="Enter your first name" autocomplete="given-name" required>
+                </label>
 
-                <label for="contactName">Contact Person:</label>
-                <input type="text" id="contactName" name="contactName" required><br>
+                <label>Last Name:
+                    <input type="text" name="lastName" title="Enter your last name" autocomplete="family-name" required>
+                </label>
 
-                <label for="email">Email Address:</label>
-                <input type="email" id="email" name="email" required><br>
+                <label>Organizational Title:
+                    <input type="text" name="orgTitle" title="Enter your title" autocomplete="organization-title"
+                           pattern="[A-Za-z\- ]{7,}" required>
+                </label>
 
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" required><br>
+                <label>Email:
+                    <input type="email" name="email" title="Enter your email" autocomplete="email"
+                           placeholder="example@email.com" required>
+                </label>
 
-                <label for="membershipLevel">Choose Membership Level:</label>
-                <select id="membershipLevel" name="membershipLevel">
-                    <option value="non-profit">Non-Profit</option>
-                    <option value="silver">Silver - $250</option>
-                    <option value="gold">Gold - $500</option>
-                </select><br>
+                <label>Mobile Phone:
+                    <input type="tel" name="phone" title="Enter your mobile number" autocomplete="tel" required>
+                </label>
 
-                <label for="comments">Additional Comments:</label>
-                <textarea id="comments" name="comments" rows="4"></textarea>
+                <label>Business Name:
+                    <input type="text" name="businessName" title="Enter your business name" autocomplete="organization" required>
+                </label>
 
-                <button type="submit">Submit Application</button>
+                <label>Membership Level:
+                    <select name="membershipLevel" required>
+                        <option value="np">Non-Profit (Free)</option>
+                        <option value="bronze">Bronze Membership</option>
+                        <option value="silver">Silver Membership</option>
+                        <option value="gold">Gold Membership</option>
+                    </select>
+                </label>
+
+                <label>Business Description:
+                    <textarea name="description" title="Describe your business"></textarea>
+                </label>
+
+                <input type="hidden" name="timestamp" id="timestamp">
+
+                <input type="submit" value="Submit Application">
             </form>
-            <p id="confirmationMessage" class="hidden">🎉 Thank you! Your application has been successfully submitted.</p>
         </section>
+
+        <!-- Membership Cards with Modals -->
+<section class="membership-cards">
+    <h2>Membership Levels</h2>
+    <div class="cards">
+        <div class="card np">
+            <h3>Non-Profit</h3>
+            <button class="open-modal" data-modal="modal-np">Learn More</button>
+        </div>
+
+        <div class="card bronze">
+            <h3>Bronze Membership</h3>
+            <button class="open-modal" data-modal="modal-bronze">Learn More</button>
+        </div>
+
+        <div class="card silver">
+            <h3>Silver Membership</h3>
+            <button class="open-modal" data-modal="modal-silver">Learn More</button>
+        </div>
+
+        <div class="card gold">
+            <h3>Gold Membership</h3>
+            <button class="open-modal" data-modal="modal-gold">Learn More</button>
+        </div>
+    </div>
+</section>
+
+<!-- Modals -->
+<div id="modal-np" class="modal">
+    <div class="modal-content">
+        <h2>Non-Profit Membership</h2>
+        <p>✅ Access to networking events</p>
+        <p>✅ Community involvement</p>
+        <button class="close-modal">Close</button>
+    </div>
+</div>
+
+<div id="modal-bronze" class="modal">
+    <div class="modal-content">
+        <h2>Bronze Membership</h2>
+        <p>⭐ Basic directory listing</p>
+        <p>⭐ Business training</p>
+        <p>⭐ Networking opportunities</p>
+        <button class="close-modal">Close</button>
+    </div>
+</div>
+
+<div id="modal-silver" class="modal">
+    <div class="modal-content">
+        <h2>Silver Membership</h2>
+        <p>🌟 Featured directory listing</p>
+        <p>🌟 Social media promotion</p>
+        <button class="close-modal">Close</button>
+    </div>
+</div>
+
+<div id="modal-gold" class="modal">
+    <div class="modal-content">
+        <h2>Gold Membership</h2>
+        <p>💎 Premium listing</p>
+        <p>💎 Advertising</p>
+        <p>💎 VIP events access</p>
+        <button class="close-modal">Close</button>
+    </div>
+</div>
+
     </main>
 
     <footer>

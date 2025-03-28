@@ -1,7 +1,7 @@
 // Replace 'YOUR_API_KEY' with your OpenWeatherMap API Key
 const API_KEY = "ee0180aee459070add4f8ebcb4fbe5ca"; 
-const CITY = "Magboro"; // Change to your location
-const COUNTRY = "NG"; // Nigeria
+const CITY = "Magboro"; 
+const COUNTRY = "NG"; 
 
 // Get Weather Data
 async function fetchWeather() {
@@ -17,20 +17,29 @@ async function fetchWeather() {
         const forecastResponse = await fetch(forecastUrl);
         const forecastData = await forecastResponse.json();
 
-        // Extract Weather Data
+        // Extract Current Weather Data
         const temperature = data.main.temp;
-        const condition = data.weather[0].description;
+        const conditionMain = data.weather[0].main;  // Get the main weather category
         const icon = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+
+        // Convert main weather condition to a friendly description
+        const conditionText = getWeatherDescription(conditionMain);
 
         // Extract 3-day forecast
         const forecastList = forecastData.list.filter((entry, index) => index % 8 === 0).slice(0, 3);
         const forecastHTML = forecastList.map(entry => {
-            return `<p><strong>${new Date(entry.dt_txt).toLocaleDateString()}</strong>: ${entry.main.temp}°C, ${entry.weather[0].description}</p>`;
+            const dateTime = new Date(entry.dt_txt);
+            const formattedDate = dateTime.toLocaleDateString(undefined, { weekday: "short", day: "numeric", month: "short" });
+            const formattedTime = dateTime.toLocaleTimeString(undefined, { hour: "2-digit", minute: "2-digit" });
+            const forecastCondition = getWeatherDescription(entry.weather[0].main);
+        
+            return `<p><strong>${formattedDate}, ${formattedTime}</strong>: ${entry.main.temp}°C, ${forecastCondition}</p>`;
         }).join("");
+        
 
         // Update HTML
         document.getElementById("weather").innerHTML = `
-            <p><strong>Current:</strong> ${temperature}°C, ${condition} <img src="${icon}" alt="Weather icon"></p>
+            <p><strong>Current:</strong> ${temperature}°C, ${conditionText} <img src="${icon}" alt="Weather icon"></p>
         `;
 
         document.querySelector(".weather-forecast").innerHTML = `
@@ -42,6 +51,33 @@ async function fetchWeather() {
         console.error("Weather Fetch Error:", error);
     }
 }
+
+// Helper function to map weather conditions to friendly descriptions
+function getWeatherDescription(condition) {
+    switch (condition) {
+        case "Clear":
+            return "☀️ Sunny";
+        case "Clouds":
+            return "☁️ Cloudy";
+        case "Rain":
+            return "🌧️ Rainy";
+        case "Drizzle":
+            return "🌦️ Light Rain";
+        case "Thunderstorm":
+            return "⛈️ Stormy";
+        case "Snow":
+            return "❄️ Snowy";
+        case "Mist":
+        case "Fog":
+            return "🌫️ Foggy";
+        default:
+            return condition; // Use the original description if no match
+    }
+}
+
+// Run the function when the page loads
+document.addEventListener("DOMContentLoaded", fetchWeather);
+
 
 // Fetch businesses
 async function getBusinesses() {
