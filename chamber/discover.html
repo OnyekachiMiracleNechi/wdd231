@@ -1,28 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Discover opportunities in the Transport Chamber of Commerce">
     <meta name="author" content="Onyekachi M. Nechi">
-    <title>Discover kachi Transport Chamber: Connecting Businesses & Communities" 🚛🌍</title>
+    <meta name="keywords" content="Transport Chamber, Commerce, Businesses, Ogun State, Transport Expo, Business Networking">
+    <meta name="robots" content="index, follow">
+    <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <title>Discover Kachi Transport Chamber: Connecting Businesses & Communities 🚛🌍</title>
 
-     <!-- Favicon -->
-     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-     
+    <!-- Favicon -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/discover.css">
     <link rel="stylesheet" href="styles/nav.css">
     <script src="scripts/directory.js" defer></script>
 
-     <!-- Facebook Open Graph Meta Tags -->
-     <meta property="og:title" content="Transport Chamber of Commerce - Business Directory">
-     <meta property="og:type" content="website">
-     <meta property="og:image" content="https://onyekachimiraclenechi.github.io/wdd231/chamber/images/og-image.jpg">
-     <meta property="og:url" content="https://onyekachimiraclenechi.github.io/wdd231/chamber/index.html">
-     <meta property="og:description" content="Explore local businesses and organizations that are part of the Transport Chamber of Commerce.">
-     <meta property="og:site_name" content="Transport Chamber">
+    <!-- Facebook Open Graph Meta Tags -->
+    <meta property="og:title" content="Transport Chamber of Commerce - Business Directory">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://onyekachimiraclenechi.github.io/wdd231/chamber/images/og-image.jpg">
+    <meta property="og:url" content="https://onyekachimiraclenechi.github.io/wdd231/chamber/index.html">
+    <meta property="og:description" content="Explore local businesses and organizations that are part of the Transport Chamber of Commerce.">
+    <meta property="og:site_name" content="Transport Chamber">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Discover Kachi Transport Chamber: Connecting Businesses & Communities">
+    <meta name="twitter:description" content="Explore local businesses and organizations that are part of the Transport Chamber of Commerce.">
+    <meta name="twitter:image" content="https://onyekachimiraclenechi.github.io/wdd231/chamber/images/og-image.jpg">
+
+   
+       
 </head>
+
 <body>
     <header>
         <div class="logo">
@@ -34,7 +48,6 @@
 
         <nav>
             <ul>
-                
                 <li><a href="index.html">Home</a></li>
                 <li><a href="directory.html">Directory</a></li>
                 <li><a href="discover.html" class="active">Discover</a></li>
@@ -45,36 +58,116 @@
 
     <main>
         <h2>Discover Our Community</h2>
-        
-        <!-- ✅ Image Montage -->
+
         <section class="image-montage">
-            <img src="images/cityscape.jpg" alt="Cityscape">
-            <img src="images/landmark.jpg" alt="Landmark">
-            <img src="images/business-hub.jpg" alt="Business Hub">
+            <img src="images/cityscape.jpg" alt="Cityscape showing the city skyline and buildings">
+            <img src="images/landmark.jpg" alt="Landmark building of the city">
+            <img src="images/business-hub.jpg" alt="Business hub in the city promoting trade">
         </section>
 
-        <!-- ✅ Local History -->
-        <section class="local-history">
-            <h3>Local History</h3>
-            <p>Our city has a rich history as a major transportation hub, connecting businesses and communities for decades.</p>
-        </section>
+        <section class="items-of-interest">
+            <h3>Explore the Area</h3>
+            <div class="grid-container">
+                <!-- Card 1: Olumo Rock -->
+                <div class="card" onclick="openModal('Olumo Rock', 'Olumo Rock is a famous natural landmark in Abeokuta, Nigeria. The rock is of significant cultural and historical importance, as it was used as a fortress during the 19th-century Egba Wars. Today, visitors can hike to the summit for spectacular views of the city, explore caves, and learn about the local history through guided tours. It’s a popular spot for adventure tourism and relaxation, offering a peaceful environment surrounded by nature.')">
+                    <h2>Olumo Rock</h2>
+                    <figure>
+                        <img src="images/olumorock.webp" alt="Olumo Rock">
+                    </figure>
+                    <address>Olumo Rock, Abeokuta, Ogun State</address>
+                    <p>A historic rock formation offering panoramic views of the city.</p>
+                    <button>Learn More</button>
+                </div>
+                
+                <!-- Card 2: Abeokuta National Museum -->
+                <div class="card" onclick="openModal('Abeokuta National Museum', 'The Abeokuta National Museum is a renowned cultural and historical site, showcasing the rich heritage of Ogun State. It houses artifacts that represent the region’s history, including ancient tools, artworks, and cultural relics. The museum also educates visitors on the significance of the Egba people in Nigerian history, including their role in the formation of the modern state of Ogun. With its well-curated exhibits, the museum is a must-visit for history enthusiasts and those keen on exploring Nigerian culture.')">
+                    <h2>Abeokuta National Museum</h2>
+                    <figure>
+                        <img src="images/abeokuta.webp" alt="Abeokuta National Museum">
+                    </figure>
+                    <address>Iwe-Iroyin Press, Abeokuta, Ogun State</address>
+                    <p>A museum that showcases the rich cultural heritage of Ogun State.</p>
+                    <button>Learn More</button>
+                </div>
 
-        <!-- ✅ Current Demographics -->
-        <section class="current-demographics">
-            <h3>Current Demographics</h3>
-            <p>Population: Over 2 million. <br> Key Industries: Transport, Logistics, Commerce.</p>
-        </section>
+                <!-- Card 3: Ake Palace -->
+                <div class="card" onclick="openModal('Ake Palace', 'Ake Palace is the official residence of the Alake of Egbaland, one of the most important monarchs in Ogun State. This stunning palace is not only a historical site but also a symbol of the culture and authority of the Egba people. The palace is known for its beautiful architecture, rich cultural significance, and historical importance as the center of governance. Visitors can explore the palace grounds and learn about the royal history that has shaped the region.')">
+                    <h2>Ake Palace</h2>
+                    <figure>
+                        <img src="images/akepalace.webp" alt="Ake Palace">
+                    </figure>
+                    <address>Ake Palace, Abeokuta, Ogun State</address>
+                    <p>The residence of the Alake of Egbaland and a symbol of royal history.</p>
+                    <button>Learn More</button>
+                </div>
 
-        <!-- ✅ Current Events -->
-        <section class="current-events">
-            <h3>Current Events</h3>
-            <ul>
-                <li><strong>Transport Expo 2025</strong> - April 15-18, Lagos.</li>
-                <li><strong>Road Safety Conference</strong> - May 10, 2025.</li>
-                <li><strong>Business Networking Gala</strong> - June 5, 2025.</li>
-            </ul>
+                <!-- Card 4: Olokemeji Forest Reserve -->
+                <div class="card" onclick="openModal('Olokemeji Forest Reserve', 'Olokemeji Forest Reserve is a protected forest area located in Ogun State, renowned for its biodiversity and tranquil natural beauty. The forest serves as an important ecological sanctuary, home to a wide variety of plant and animal species. It is a favorite destination for eco-tourists, wildlife photographers, and those looking to explore the serene landscapes of the region. Visitors can enjoy nature walks, bird watching, and eco-friendly activities in this pristine environment.')">
+                    <h2>Olokemeji Forest Reserve</h2>
+                    <figure>
+                        <img src="images/olokemeji.webp" alt="Olokemeji Forest Reserve">
+                    </figure>
+                    <address>Olokemeji Forest Reserve, Ogun State</address>
+                    <p>A protected area known for its rich biodiversity and serene natural beauty.</p>
+                    <button>Learn More</button>
+                </div>
+
+                <!-- Card 5: Idanre Hills -->
+                <div class="card" onclick="openModal('Idanre Hills', 'Idanre Hills is an ancient, awe-inspiring landscape located in Ondo State. It’s known for its steep terrain, beautiful scenic views, and cultural significance. The hills are home to historical sites such as the Old Idanre Town and the Owa’s palace. Hiking the hills offers visitors a chance to experience the culture of the Idanre people while enjoying the beauty of the surrounding environment. It’s a must-visit for nature lovers and those interested in Nigerian history and culture.')">
+                    <h2>Idanre Hills</h2>
+                    <figure>
+                        <img src="images/idanre.webp" alt="Idanre Hills">
+                    </figure>
+                    <address>Idanre Hills, Ondo State</address>
+                    <p>An ancient landscape with breathtaking views and historical landmarks.</p>
+                    <button>Learn More</button>
+                </div>
+
+                <!-- Card 6: Erin Ijesha Waterfall -->
+                <div class="card" onclick="openModal('Erin Ijesha Waterfall', 'Erin Ijesha Waterfall, also known as Olumirin Waterfall, is a stunning natural wonder located in Osun State. The waterfall is famous for its multiple tiers, crystal-clear water, and serene environment. Visitors can enjoy hiking to the waterfall’s top, where they can experience breathtaking views of the surrounding forest and landscape. The site is perfect for eco-tourism and relaxation, offering a peaceful retreat into nature.')">
+                    <h2>Erin Ijesha Waterfall</h2>
+                    <figure>
+                        <img src="images/erin.webp" alt="Erin Ijesha Waterfall">
+                    </figure>
+                    <address>Erin Ijesha, Osun State</address>
+                    <p>A serene waterfall with multiple tiers and breathtaking views.</p>
+                    <button>Learn More</button>
+                </div>
+
+                <!-- Card 7: Ogbunike Caves -->
+                <div class="card" onclick="openModal('Ogbunike Caves', 'The Ogbunike Caves, located in Anambra State, are a significant cultural and natural heritage site. The caves are famous for their spiritual significance, as they have been used for centuries for religious and cultural ceremonies by the local people. Visitors can explore the caves, which consist of interconnected tunnels and chambers, and experience the rich history of the site. It’s a great location for both history buffs and nature lovers alike.')">
+                    <h2>Ogbunike Caves</h2>
+                    <figure>
+                        <img src="images/cave.webp" alt="Ogbunike Caves">
+                    </figure>
+                    <address>Ogbunike, Anambra State</address>
+                    <p>A historical and cultural site with spiritual significance and natural beauty.</p>
+                    <button>Learn More</button>
+                </div>
+
+                <!-- Card 8: Zuma Rock -->
+                <div class="card" onclick="openModal('Zuma Rock', 'Zuma Rock, located near Abuja, is one of Nigeria’s most iconic landmarks. Standing at over 725 meters, the rock is a majestic natural formation with a unique face-like appearance. The rock holds historical and cultural significance and is an important symbol of the Gwari people. Visitors can hike around the rock or simply enjoy the stunning views from its base. Zuma Rock is a great place to visit for those looking to explore natural beauty and Nigerian heritage.')">
+                    <h2>Zuma Rock</h2>
+                    <figure>
+                        <img src="images/zuma.webp" alt="Zuma Rock">
+                    </figure>
+                    <address>Zuma Rock, Near Abuja</address>
+                    <p>An iconic rock formation with historical significance and stunning views.</p>
+                    <button>Learn More</button>
+                </div>
+
+            </div>
         </section>
     </main>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <p id="modalDescription"></p>
+        </div>
+    </div>
 
     <footer>
         <div class="footer-left">
@@ -82,7 +175,7 @@
             <p>📧 Email: <a href="mailto:info@transportchamber.org">info@transportchamber.org</a></p>
             <p>📞 Phone: +234 7056321232</p>
         </div>
-        
+
         <div class="footer-center">
             <a href="https://www.youtube.com" target="_blank" aria-label="Visit our YouTube channel">
                 <img src="images/youtube.png" alt="YouTube" class="social-icon">
@@ -94,14 +187,15 @@
                 <img src="images/facebook.png" alt="Facebook" width="24">
             </a>
         </div>
-        
+
         <div class="footer-right">
             <p>🌍 Transport Chamber of Commerce - Empowering Businesses</p>
             <p>&copy; <span id="year"></span> | Onyekachi M. Nechi | WDD 231</p>
             <p>Last modified: <span id="lastModified"></span></p>
         </div>
     </footer>
-    
 
+    
 </body>
+
 </html>

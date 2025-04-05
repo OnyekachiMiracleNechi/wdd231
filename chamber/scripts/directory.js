@@ -36,7 +36,6 @@ async function fetchWeather() {
             return `<p><strong>${formattedDate}, ${formattedTime}</strong>: ${entry.main.temp}°C, ${forecastCondition}</p>`;
         }).join("");
         
-
         // Update HTML
         document.getElementById("weather").innerHTML = `
             <p><strong>Current:</strong> ${temperature}°C, ${conditionText} <img src="${icon}" alt="Weather icon"></p>
@@ -224,3 +223,52 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    async function fetchItems() {
+        try {
+            const response = await fetch("data/items.json");
+            const items = await response.json();
+
+            const container = document.getElementById("items-container");
+            container.innerHTML = '';  // Clear any existing content
+
+            items.forEach(item => {
+                const card = document.createElement('div');
+                card.classList.add('card');
+
+                card.innerHTML = `
+                    <h2>${item.title}</h2>
+                    <figure>
+                        <img src="${item.image}" alt="${item.title}" />
+                    </figure>
+                    <address>${item.address}</address>
+                    <p>${item.description}</p>
+                    <button onclick="window.location.href='${item.link}'">Learn More</button>
+                `;
+
+                container.appendChild(card);
+            });
+        } catch (error) {
+            console.error("Error fetching items:", error);
+        }
+    }
+
+    // Fetch items when the page is loaded
+    fetchItems();
+});
+
+
+ // Open Modal Function
+ function openModal(title, description) {
+    document.getElementById('modalTitle').innerText = title;
+    document.getElementById('modalDescription').innerText = description;
+    document.getElementById('myModal').style.display = "block";
+}
+
+// Close Modal Function
+function closeModal() {
+    document.getElementById('myModal').style.display = "none";
+}

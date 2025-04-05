@@ -1,0 +1,53 @@
+{
+    "items": [
+      {
+        "name": "Olumo Rock",
+        "address": "Olumo Rock, Abeokuta, Ogun State",
+        "description": "A historic rock formation in Abeokuta offering panoramic views of the city, and a great spot for hiking and sightseeing.",
+        "image": "images/olumo_rock.webp"
+      },
+      {
+        "name": "Abeokuta National Museum",
+        "address": "Iwe-Iroyin Press, Abeokuta, Ogun State",
+        "description": "Located in the heart of Abeokuta, this museum showcases the rich cultural heritage of Ogun State.",
+        "image": "images/abeokuta_museum.webp"
+      },
+      {
+        "name": "Ogun State Cultural Centre",
+        "address": "Ogun State Cultural Centre, Abeokuta, Ogun State",
+        "description": "A venue for various cultural performances and events, reflecting the traditions and history of Ogun State.",
+        "image": "images/ogun_cultural_centre.webp"
+      },
+      {
+        "name": "Isara Waterfalls",
+        "address": "Isara, Ogun State",
+        "description": "A hidden gem in Ogun State, perfect for nature lovers and those looking to enjoy a peaceful retreat by the waterfall.",
+        "image": "images/isara_waterfalls.webp"
+      },
+      {
+        "name": "Ogun State Government Secretariat",
+        "address": "Oke-Mosan, Abeokuta, Ogun State",
+        "description": "The political hub of the state, located in Oke-Mosan, Abeokuta.",
+        "image": "images/ogun_secretariat.webp"
+      },
+      {
+        "name": "Ake Festival",
+        "address": "Abeokuta, Ogun State",
+        "description": "A cultural event in Abeokuta celebrating the rich Yoruba heritage with traditional dances, music, and masquerades.",
+        "image": "images/ake_festival.webp"
+      },
+      {
+        "name": "Ginger and Cocoa Plantations",
+        "address": "Various Locations, Ogun State",
+        "description": "Ogun State is known for its agricultural contributions, and these plantations showcase its growing industry.",
+        "image": "images/ginger_cocoa_plantations.webp"
+      },
+      {
+        "name": "Centenary Hall, Abeokuta",
+        "address": "Centenary Hall, Abeokuta, Ogun State",
+        "description": "A historical building, rich in colonial-era architecture, and a prominent landmark in the city of Abeokuta.",
+        "image": "images/centenary_hall.webp"
+      }
+    ]
+  }
+  
