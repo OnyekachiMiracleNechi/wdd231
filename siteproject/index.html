@@ -1,71 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poise Enterprise - Clothing Store</title>
-    <link rel="stylesheet" href="styles/home.css">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Poise Enterprise - Your one-stop clothing destination for elegant, modern fashion" />
+    <title>Poise Enterprise - Home</title>
+  
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Poise Enterprise - Elegant Modern Fashion" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://onyekachimiraclenechi.github.io/wdd231/chamber/images/og-image.jpg" />
+    <meta property="og:url" content="https://onyekachimiraclenechi.github.io/wdd231/siteproject/index.html" />
+    <meta property="og:description" content="Discover timeless fashion at Poise Enterprise — where elegance meets comfort." />
+    <meta property="og:site_name" content="Poise Enterprise" />
+  
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Poise Enterprise - Fashion with Confidence and Elegance" />
+    <meta name="twitter:description" content="Your one-stop clothing destination for elegant, modern fashion. Explore our premium collections today." />
+    <meta name="twitter:image" content="https://onyekachimiraclenechi.github.io/wdd231/siteproject/images/og-image.jpg" />
+  
+    <!-- Import Montserrat and Open Serif fonts from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Open+Serif&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <script type="module" src="scripts/main.js"></script>
+    <link rel="icon" href="images/favicon.ico" type="image/png" />
+  </head>
+  
+  
+
 <body>
-
-    <h1>Site Plan: Poise Enterprise</h1>
-
-    <div class="transparent-box">
-        <h2>1. Site Name</h2>
-        <p><strong>Site Name:</strong> Poise Enterprise</p>
-        <p>Poise Enterprise is an online fashion store dedicated to providing stylish and high-quality clothing. The name "Poise" signifies elegance and confidence, making it the perfect brand for fashion lovers.</p>
+  <header>
+    <div class="logo">
+      <img src="images/logo1.png" alt="Poise Enterprise Logo" />
+      <h1>Poise Enterprise</h1>
     </div>
 
-    <div class="transparent-box">
-        <h2>2. Site Purpose</h2>
-        <p>The website will serve as an online shopping platform where customers can browse, select, and purchase fashionable clothing. It will feature different collections, special discounts, and a seamless checkout experience.</p>
-    </div>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+      &#9776; <!-- Hamburger icon -->
+    </button>
+  
+    <nav id="mainNav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="cart.html">Cart</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <div class="transparent-box">
-        <h2>3. Scenarios</h2>
-        <ul>
-            <li>What are the latest fashion collections available on Poise Enterprise?</li>
-            <li>How can I place an order and track my delivery?</li>
-        </ul>
+  <section class="hero">
+    <img src="images/hero2.png" alt="Elegant fashion display" loading="lazy" />
+    <div class="hero-text">
+      <h1>Welcome to Poise Enterprise</h1>
+      <p>Where elegance meets comfort — explore timeless fashion tailored for every style.</p>
+      <a href="shop.html" class="btn">Start Shopping</a>
     </div>
+  </section>
 
+  <section class="intro">
     <div class="transparent-box">
-        <h2>4. Color Schema</h2>
-        <p><strong>Primary Color:</strong> <span class="gold-text">Gold (#FFD700)</span> - Used for branding and highlights.</p>
-        <p><strong>Secondary Color:</strong> <span class="gray-text">White/Light Gray (#AAAAAA)</span> - Used for contrast and readability.</p>
-        <p><strong>Background:</strong> <span class="black-text">Black (Transparent Overlay) (#000000)</span> - Gives a modern and elegant look.</p>
-        <p><strong>Hover Color:</strong> <span style="color: whitesmoke;">Whitesmoke (#F5F5F5)</span> - Used for link hover effects.</p>
+      <h2>Why Choose Poise?</h2>
+      <p>We believe fashion is more than just clothing — it's a statement of confidence, identity, and poise. At Poise Enterprise, every piece is carefully curated to ensure you stand out with elegance.</p>
+      <p>Our collections blend modern trends with timeless class to keep you stylish and comfortable.</p>
+      <p><strong>Discover your poise.</strong> Redefine your wardrobe with our premium selections.</p>
     </div>
-    
+  </section>
 
-    <div class="transparent-box">
-        <h2>5. Typography</h2>
-        <p><strong>Headings:</strong> Montserrat</p>
-        <p><strong>Body Text:</strong> Open Sans </p>
-    </div>
+  <footer>
+    <p>&copy; 2025 Poise Enterprise | All Rights Reserved</p>
+    <p><a href="attribution.html">Attributions</a></p>
+    <p>Last modified: <span id="lastModified"></span></p>
+  </footer>
 
-    <div class="transparent-box">
-        <h2>6. Wireframe</h2>
-        <p>Below is a placeholder for the wireframe sketch. This will include a <strong>mobile view and a desktop view</strong>.</p>
-        <div class="wireframe">
-            <p>[Wireframe Sketch Placeholder]</p>
-            <img src="images/desktop.jpg" alt="Home page" class="desktop-view">
-            <img src="images/mobile.jpg" alt="Home page" class="mobile-view">
-        </div>
-    </div>
-
-    <!-- Footer Section -->
-    <footer>
-        <p>&copy; 2025 Poise Enterprise | All Rights Reserved</p>
-        <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
-        <div class="footer-right">
-            <p>🌍 Poise Enterprise - Clothing Store</p>
-            <p>&copy; <span id="year"></span> | Onyekachi M. Nechi | WDD 231</p>
-            <p>Last modified: <span id="lastModified"></span></p>
-        </div>
-    
-        
-    </footer>
+  
 
 </body>
 </html>

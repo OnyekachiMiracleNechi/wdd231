@@ -1,0 +1,58 @@
+[
+  {
+      "id": 1,
+      "name": "Classic White T-Shirt",
+      "price": 4500,
+      "image": "images/classic.jpg",
+      "description": "Soft cotton T-shirt that fits any occasion."
+  },
+  {
+      "id": 2,
+      "name": "Denim Jeans",
+      "price": 12000,
+      "image": "images/denimjean.jpg",
+      "description": "Comfortable and stylish straight-fit denim."
+  },
+  {
+      "id": 3,
+      "name": "Floral Dress",
+      "price": 8500,
+      "image": "images/floral.jpg",
+      "description": "Elegant dress with beautiful floral patterns."
+  },
+  {
+      "id": 4,
+      "name": "Casual Hoodie",
+      "price": 10000,
+      "image": "images/hoodie.jpg",
+      "description": "Warm and cozy hoodie for chilly days."
+  },
+  {
+      "id": 5,
+      "name": "Leather Jacket",
+      "price": 25000,
+      "image": "images/jacket.jpg",
+      "description": "Bold leather jacket with a classic cut."
+  },
+  {
+      "id": 6,
+      "name": "Striped Polo Shirt",
+      "price": 7000,
+      "image": "images/shirt.jpg",
+      "description": "Versatile striped polo shirt for smart-casual wear."
+  },
+  {
+      "id": 7,
+      "name": "Maxi Skirt",
+      "price": 9000,
+      "image": "images/skirt.jpg",
+      "description": "Flowy maxi skirt for an elegant silhouette."
+  },
+  {
+      "id": 8,
+      "name": "Slim Fit Trousers",
+      "price": 11000,
+      "image": "images/trouser.jpg",
+      "description": "Sleek slim-fit trousers perfect for formal settings."
+  }
+]
